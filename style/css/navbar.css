@@ -1,0 +1,47 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1C5560;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    z-index: 1000; 
+}
+
+/* 2. Emulando o Auto Layout do Figma na Nav */
+header nav.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 3. Redimensionamento Seguro da Logo */
+header nav img {
+    height: 45px;
+    width: auto;
+}
+
+/* 4. Alinhamento da Lista de Links (ul) */
+header nav ul.row {
+    display: flex;
+    gap: 32px; 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* 5. Estilização dos Textos e Interação (a) */
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600; 
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #FBFFCD;
+}
