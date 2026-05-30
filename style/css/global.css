@@ -1,0 +1,29 @@
+body {
+    margin: 120px;
+    font-family: 'League Spartan', sans-serif;
+    font-size: large;
+    background: linear-gradient(to bottom, #1C5560 0%, #000000 100%);
+    min-height: 100vh;
+}
+
+p {
+    color: #fff;
+}
+
+h1,h2,h3 {
+    color: #FBFFCD;
+}
+
+img {
+    width: auto;
+    height: auto;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    align-items: center;
+    max-width: 100%;
+}
