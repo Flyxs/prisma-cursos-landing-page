@@ -1,0 +1,16 @@
+body {
+    margin: 120px;
+}
+
+main {
+    margin: 0px;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    align-items: center;
+    max-width: 100%;
+}
