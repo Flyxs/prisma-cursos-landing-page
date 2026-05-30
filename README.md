@@ -5,6 +5,13 @@ A nossa branch main (onde fica a versão oficial da landing page) é protegida. 
 
 Siga o passo a passo abaixo toda vez que for programar a sua parte:
 
+## Passo 0: Preparando o terreno (Git & GitHub)
+Antes de começar, você precisa garantir que tem as ferramentas básicas configuradas na sua máquina:
+
+- O Programa (Git): É ele quem gerencia o versionamento do nosso código no seu computador. Se ainda não tem instalado, [baixe o Git aqui](https://git-scm.com/install/). Ao instalar, pode ir clicando em "Next" aceitando as configurações padrão.
+- A Plataforma (GitHub): É a "rede social" onde o nosso repositório e o projeto da equipe vivem. Se ainda não tem, crie sua conta.
+- O Editor (VS Code): Para facilitar a nossa vida, usaremos o Visual Studio Code para programar e enviar os códigos de forma visual. (se você prefere outro editor é contigo)
+
 ## Passo 1: Baixar o projeto para o seu computador (Clone)
 Você só precisa fazer isso na primeira vez!
 Abra o terminal no seu computador, navegue até a pasta onde quer guardar o projeto e digite:
