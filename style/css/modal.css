@@ -10,7 +10,8 @@
 }
 
 #modal-box {
-  background: linear-gradient(to bottom, #0d1b2a, #1a1a2e);
+  font-family: 'League Spartan', sans-serif;
+  background: linear-gradient(to bottom, #001f36 0%, #000000 100%);
   border: 1px solid #2a4a6a;
   border-radius: 8px;
   padding: 40px;
