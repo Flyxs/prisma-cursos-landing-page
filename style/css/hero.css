@@ -1,7 +1,7 @@
 section#hero{
     margin: -120px;
     padding: 60px 80px;
-    background: linear-gradient(to bottom, #1C5560 0%, #000000 100%);
+    background: linear-gradient(to bottom, #1C5560 0%, #000000 70%);
     min-height: 100vh;
 }
 
@@ -59,7 +59,7 @@ section#hero button:hover{
 
 #hero.row img{
     width: 48%;
-    max-width: 480px;
+    max-width: 650px;
     border-radius: 8px;
     object-fit: cover;
 }
