@@ -7,7 +7,7 @@
 }
 
 #cursos h2{
-    font-size: 2.4rem;
+    font-size: 3rem;
     margin-bottom: 50px;
 }
 
@@ -15,59 +15,37 @@
     justify-content: space-between;
     gap: 40px;
     margin-bottom: 40px;
+    align-items: flex-start;
 }
 
 #cursos-tecnologia,
-#cursos-gestão,
+#cursos-gestao,
 #cursos-design{
     display: flex;
     flex-direction: column;
-    allign-items: center;
+    align-items: flex-start;
     gap: 12px;
-    flex: 1;
+    flex: 1;;
 }
 
 #cursos-tecnologia img,
-#cursos-gestão img,
+#cursos-gestao img,
 #cursos-design img{
-    width: 120%;
-    height: 120px;
-}
-
-#cursos-tecnologia a::after{
-    content: 'tecnologia';
+    width: 150%;
+    height: 150px;
+    object-fit: contain;
     display: block;
-    color: #79AE92;
-    font-size: 1rem;
-    font-weight: 600;
-    margin-top: 8px;
-}   
-
-#cursos-gestão a::after{
-    content: 'gestão';
-    display: block;
-    color: #79AE92;
-    font-size: 1rem;
-    font-weight: 600;
-    margin-top: 8px;
-}
-
-#cursos-design a::after{
-    content: 'design';
-    display: block;
-    color: #79AE92;
-    font-size: 1rem;
-    font-weight: 600;
-    margin-top: 8px;
+    padding-right: 170px;
 }
 
 #cursos-tecnologia p,
-#cursos-gestão p,
+#cursos-gestao p,
 #cursos-design p{
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     text-align: center;
     line-height: 1.6;
-    max-width: 202px;
+    max-width: 220px;
+    margin: 10px auto;
 }
 
 #cursos > p{ 
