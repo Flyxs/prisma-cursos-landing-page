@@ -2,7 +2,7 @@
     padding: 60px 80px;
     margin: -120px;
     margin-top: 0;
-    background: radial-gradient(ellipse at center, #001f36 0%, #000000 70%);
+    background: linear-gradient(to bottom, #000000 0%, #001f36 70%);
     text-align: center;
 }
 
