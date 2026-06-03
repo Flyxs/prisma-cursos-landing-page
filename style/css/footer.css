@@ -1,6 +1,6 @@
 
 footer.row {
-	background-color: #000000;
+	background-color: transparent;
 	color: #ffffff;
 	padding: 40px 20px;
 	position: relative;
@@ -53,8 +53,9 @@ footer #formulario {
 footer form {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 12px;
+	gap: 20px;
 	width: 100%;
+	align-items: flex-end;
 }
 
 footer form .column {
@@ -104,8 +105,16 @@ footer input::placeholder {
 	color: rgba(255,255,255,0.6);
 }
 
+footer form > div:last-child {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 10px;
+}
+
 footer button {
-	padding: 10px 18px;
+	width: 160px;
+	padding: 12px 0;
 	background: #1C5560;
 	color: #000000;
 	border: none;
