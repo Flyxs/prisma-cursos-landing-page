@@ -1,0 +1,107 @@
+#modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal-box {
+  font-family: 'League Spartan', sans-serif;
+  background: linear-gradient(to bottom, #001f36 0%, #000000 100%);
+  border: 1px solid #2a4a6a;
+  border-radius: 8px;
+  padding: 40px;
+  max-width: 900px;
+  width: 90%;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  color: #fff;
+}
+
+#modal-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+#modal-logo {
+  width: 60px;
+  height: auto;
+}
+
+#modal-header h2 {
+  font-size: 2rem;
+  color: #ffffff;
+  flex: 1;
+}
+
+#modal-fechar {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+#modal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.modal-curso h3 {
+  color: #FBFFCD;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.modal-curso p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #fff;
+}
+
+.modal-carga {
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+#modal-cta {
+  text-align: center;
+  color: #FBFFCD;
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+#modal-btn-contato {
+  display: block;
+  margin: 0 auto;
+  padding: 14px 40px;
+  background-color: #4a8a6a;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: 2px solid #6dbf8a;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'League Spartan', sans-serif;
+  transition: background 0.3s;
+}
+
+#modal-btn-contato:hover {
+  background-color: #6dbf8a;
+  color: #1a1a1a;
+}

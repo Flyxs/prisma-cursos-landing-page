@@ -17,9 +17,27 @@
     <link rel="stylesheet" href="style/css/valores.css">
     <link rel="stylesheet" href="style/css/contato.css">
     <link rel="stylesheet" href="style/css/footer.css">
+    <link rel="stylesheet" href="style/css/modal.css">
 </head>
 
 
+<div id="modal-overlay">
+  <div id="modal-box">
+    <div id="modal-header">
+      <img src="assets/logos/logo2.svg" alt="logo" id="modal-logo">
+      <h2 id="modal-titulo"></h2>
+      <button id="modal-fechar" onclick="fecharModal()">X</button>
+    </div>
+    <div id="modal-grid">
+      <div id="modal-coluna1"></div>
+      <div id="modal-coluna2"></div>
+    </div>
+    <p id="modal-cta"></p>
+    <button id="modal-btn-contato" onclick="irParaContato()">CONTATE-NOS</button>
+  </div>
+</div>
+
+<script src="style/js/cursos.js"></script>
 
 <body>
     <header>
@@ -60,17 +78,17 @@
             <h2>Alguns dos Cursos Ofertados</h2>
             <div class="row">
                 <div class="column" id="cursos-tecnologia">
-                    <a href="#"><img src="assets/cursos/tecnologia.svg" alt="tecnologia_icon"></a>
+                    <a href="#" onclick="abrirModal('tecnologia'); return false;"><img src="assets/cursos/tecnologia.svg" alt="tecnologia_icon"></a>
                     <p>Habilidades técnicas para entrar e crescer na área mais aquecida do mercado.</p>
                 </div>
 
                 <div class="column" id="cursos-gestao">
-                    <a href="#"><img src="assets/cursos/gestao.svg" alt="gestão_icon"></a>
+                    <a href="#" onclick="abrirModal('gestao'); return false;"><img src="assets/cursos/gestao.svg" alt="gestão_icon"></a>
                     <p>Transforme criatividade em profissão com ferramentas e projetos reais.</p>
                 </div>
 
                 <div class="column" id="cursos-design">
-                    <a href="#"><img src="assets/cursos/design.svg" alt="design_icon"></a>
+                    <a href="#" onclick="abrirModal('design'); return false;"><img src="assets/cursos/design.svg" alt="design_icon"></a>
                     <p>Competências essenciais para liderar, empreender e entender o negócio.</p>
                 </div>
             </div>
