@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Profissional</title>
+    <link rel="stylesheet" href="style/css/quiz.css">
 </head>
 
 <body>
@@ -166,24 +167,24 @@
 
         <h1>QUIZ PROFISSIONAL</h1>
 
-        <p>Você possui afinidade com a área de (X).</p>
+        <p>Você possui afinidade com a área de <span id="areaPrincipal"></span>.</p>
 
         <div class="resultado-conteudo">
 
             <div class="area">
-                <a href="#" data-area="tecnologia">
+                <a href="#" id="tec">
                     Tecnologia w%
                 </a>
             </div>
 
             <div class="area">
-                <a href="#" data-area="design">
+                <a href="#" id="design">
                     Design y%
                 </a>
             </div>
 
             <div class="area">
-                <a href="#" data-area="gestao">
+                <a href="#" id="gestao">
                     Gestão z%
                 </a>
             </div>
@@ -197,8 +198,11 @@
     </div>
 
 </div>
+<button id="enviarQuiz">
+    ENVIAR QUIZ
+</button>
 </main>
-
+    <script src="style/js/quiz.js"></script>
 </body>
 
 </html>
