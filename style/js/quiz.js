@@ -1,94 +1,180 @@
-document.addEventListener("DOMContentLoaded", () => {
-    console.log("JavaScript conectado!");
-    const resultado = document.querySelector(".card-resultado");
+const perguntas = [
 
-    resultado.style.display = "none";
+    {
+        texto: "Qual atividade desperta mais interesse?",
+        respostas: [
+            "Resolver problemas usando lógica ou números.",
+            "Organizar pessoas, ideias ou projetos.",
+            "Criar algo visualmente bonito ou artístico."
+        ]
+    },
 
-    const botaoEnviar =
-        document.getElementById("enviarQuiz");
+    {
+        texto: "Em um trabalho em grupo, você normalmente:",
+        respostas: [
+            "Procura a parte técnica.",
+            "Coordena as atividades.",
+            "Cuida da apresentação e criatividade."
+        ]
+    },
 
-    botaoEnviar.addEventListener("click", () => {
+    {
+        texto: "Você prefere:",
+        respostas: [
+            "Descobrir como as coisas funcionam.",
+            "Planejar e tomar decisões.",
+            "Inventar soluções novas."
+        ]
+    },
 
-        let tecnologia = 0;
-        let gestao = 0;
-        let design = 0;
+    {
+        texto: "Qual dessas matérias você mais gosta?",
+        respostas: [
+            "Matemática/Física.",
+            "Administração/Atualidades.",
+            "Artes/Produção Visual."
+        ]
+    },
 
-        for(let i = 1; i <= 6; i++){
+    {
+        texto: "Você se considera mais:",
+        respostas: [
+            "Analítico(a).",
+            "Estratégico(a).",
+            "Criativo(a)."
+        ]
+    },
 
-            const resposta = document.querySelector(
-                `input[name="q${i}"]:checked`
-            );
+    {
+        texto: "Quando você vê um produto famoso, o que pensa?",
+        respostas: [
+            "Como ele foi criado?",
+            "Como fizeram ele crescer tanto?",
+            "Nossa, que design interessante!"
+        ]
+    }
 
-            if(!resposta){
-                alert(`Responda a pergunta ${i}.`);
-                return;
-            }
+];
 
-            if(resposta.value === "A"){
-                tecnologia++;
-            }
+let perguntaAtual = 0;
 
-            else if(resposta.value === "B"){
-                gestao++;
-            }
+let tecnologia = 0;
+let gestao = 0;
+let design = 0;
 
-            else{
-                design++;
-            }
+function mostrarPergunta(){
+
+    document.getElementById("pergunta").textContent =
+        `${perguntaAtual + 1}. ${perguntas[perguntaAtual].texto}`;
+
+    const alternativas =
+        document.getElementById("alternativas");
+
+    alternativas.innerHTML = "";
+
+    perguntas[perguntaAtual].respostas.forEach(
+        (texto, indice) => {
+
+            const botao =
+                document.createElement("button");
+
+            const letras = ["A", "B", "C"];
+
+            botao.textContent =
+                `${letras[indice]}) ${texto}`;
+
+            botao.onclick = () =>
+                responder(indice);
+
+            alternativas.appendChild(botao);
 
         }
+    );
+}
 
-        const total = tecnologia + gestao + design;
+function responder(indice){
 
-        const pctTecnologia =
-            Math.round((tecnologia / total) * 100);
+    if(indice === 0){
+        tecnologia++;
+    }
 
-        const pctGestao =
-            Math.round((gestao / total) * 100);
+    else if(indice === 1){
+        gestao++;
+    }
 
-        const pctDesign =
-            Math.round((design / total) * 100);
+    else{
+        design++;
+    }
 
-        let areaPrincipal;
+    perguntaAtual++;
 
-        if (
-            tecnologia >= gestao &&
-            tecnologia >= design
-        ){
-            areaPrincipal = "Tecnologia";
-        }
+    if(perguntaAtual < perguntas.length){
+        mostrarPergunta();
+    }
 
-        else if (
-            gestao >= tecnologia &&
-            gestao >= design
-        ){
-            areaPrincipal = "Gestão";
-        }
+    else{
+        mostrarResultado();
+    }
+}
 
-        else{
-            areaPrincipal = "Design";
-        }
+function mostrarResultado(){
 
-        document.getElementById("areaPrincipal").textContent =
-            areaPrincipal;
+    document.querySelector(".card-quiz")
+        .style.display = "none";
 
-        document.getElementById("tec").textContent =
-            `Tecnologia ${pctTecnologia}%`;
+    document.querySelector(".card-resultado")
+        .style.display = "block";
 
-        document.getElementById("design").textContent =
-            `Design ${pctDesign}%`;
+    const total =
+        tecnologia + gestao + design;
 
-        document.getElementById("gestao").textContent =
-            `Gestão ${pctGestao}%`;
+    const pctTec =
+        Math.round((tecnologia / total) * 100);
 
-        const cardsQuiz = document.querySelectorAll(".card-quiz");
+    const pctGestao =
+        Math.round((gestao / total) * 100);
 
-        cardsQuiz.forEach(card => {
-            card.style.display = "none";
-        });
-        botaoEnviar.style.display = "none";
-        resultado.style.display = "block";
+    const pctDesign =
+        Math.round((design / total) * 100);
 
-    });
+    let areaPrincipal;
+
+    if(
+        tecnologia >= gestao &&
+        tecnologia >= design
+    ){
+        areaPrincipal = "Tecnologia";
+    }
+
+    else if(
+        gestao >= tecnologia &&
+        gestao >= design
+    ){
+        areaPrincipal = "Gestão";
+    }
+
+    else{
+        areaPrincipal = "Design";
+    }
+
+    document.getElementById("areaPrincipal")
+        .textContent = areaPrincipal;
+
+    document.getElementById("tec")
+        .textContent = `Tecnologia ${pctTec}%`;
+
+    document.getElementById("design")
+        .textContent = `Design ${pctDesign}%`;
+
+    document.getElementById("gestao")
+        .textContent = `Gestão ${pctGestao}%`;
+}
+
+mostrarPergunta();
+
+document.getElementById("voltarAoInicio")
+.addEventListener("click", () => {
+
+    window.location.href = "index.html";
 
 });
