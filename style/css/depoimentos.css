@@ -36,15 +36,15 @@
 {
   display: flex;
   gap: 16px;
-  transition: transform 0.4s ease;
+  transition: transform 0.1s ease;
 }
 
 #carrossel-card
 {
   background: #1C5560 50%;
   border-radius: 10px;
-  padding: 22px 20px 24px;
-  min-width: calc(33.333% - 11px);
+  padding: 20px;
+  min-width: calc(20% - 12px);
   flex-shrink: 0;
   gap: 14px;
   max-width: 100px;
@@ -117,9 +117,9 @@
   background: #d4c97a;
 }
 
-@media (max-width: 720px)
+@media (max-width: 768px)
 {
   #carrossel-card {
-    min-width: 85%;
+    min-width: calc(25% - 12px);
   }
 }

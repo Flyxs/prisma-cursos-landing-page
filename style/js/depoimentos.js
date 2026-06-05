@@ -3,7 +3,7 @@
   const dotsEl = document.getElementById('carrosselDots');
   const cards  = track.querySelectorAll('#carrossel-card');
 
-  function perPage() { return window.innerWidth <= 720 ? 1 : 3; }
+  function perPage() { return window.innerWidth <= 720 ? 1 : 4; }
   let current = 0;
 
   function totalPages() { return Math.ceil(cards.length / perPage()); }
