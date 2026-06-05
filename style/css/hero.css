@@ -1,65 +1,70 @@
-section#hero{
-    margin: -120px;
-    padding: 60px 80px;
-    background: linear-gradient(to bottom, #1C5560 0%, #000000 70%);
-    min-height: 100vh;
-}
-
-#hero.row{
-    display: flex;
+#hero.row {
     align-items: center;
     justify-content: space-between;
-    min-height: 85vh;
-    gap: 20px;
-    padding: 0;
 }
 
-#label{
-    display: flex;
-    flex-direction: column;
+#hero .column {
+    align-items: flex-start; 
     gap: 16px;
     max-width: 52%;
-    padding-left: 0;
 }
 
-#label-label h1{
+#hero h1 {
     font-size: 3.5rem;
     line-height: 1;
 }
 
-#label-label p{
+#hero p {
     font-size: 1.8rem;
     font-weight: 600;
     line-height: 1.2;
 }
 
-section#hero button{
+#hero button {
     margin-top: 8px;
     padding: 24px 42px;
     background-color: #79AE92;
-    color: white;
+    color: #fff;
     font-size: 1.5rem;
     font-weight: 600;
     border: 2px solid #79AE92;
     border-radius: 30px;
     cursor: pointer;
     width: fit-content;
-    transition: background-color 0.3s ease;
-    display: block;
-    font-family: 'League Spartan', sans-serif;
-    -webkit-appearance: none;
-    appearance: none;
+    transition: all 0.3s ease;
     box-sizing: border-box;
 }
 
-section#hero button:hover{
-    background-color: #79AE92;
-    color: #1a1a1a;
+#hero button:hover {
+    background-color: transparent;
+    color: #79AE92;
 }
 
-#hero.row img{
+#hero img {
     width: 48%;
     max-width: 650px;
     border-radius: 8px;
     object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    
+    #hero .column {
+        max-width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    #hero h1 {
+        font-size: 2.2rem;
+    }
+
+    #hero p {
+        font-size: 1.4rem;
+    }
+
+    #hero img {
+        width: 100%;
+        margin-top: 32px;
+    }
 }

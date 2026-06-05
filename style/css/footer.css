@@ -1,198 +1,191 @@
-
 footer.row {
-	background-color: transparent;
-	color: #ffffff;
-	padding: 40px 20px;
-	position: relative;
-	box-sizing: border-box;
-	min-height: 480px;
+    background-color: transparent;
+    color: #ffffff;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    min-height: 480px;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
-footer .column#label {
-
-	top: 40px;
-	left: 20px;
-	width: 280px;
+footer > .column:first-child {
+    max-width: 280px;
+    align-items: flex-start;
 }
 
-footer #formulario {
-
-	top: 40px;
-	right: 20px;
-	width: calc(100% - 340px);
-	max-width: 620px;
-	display: flex;
-	flex-wrap: wrap;
-	gap: 12px;
+footer > .column:first-child img {
+    max-width: 140px;
+    display: block;
+    margin-bottom: 12px;
 }
 
-footer .column#label img {
-	max-width: 140px;
-	display: block;
-	margin-bottom: 12px;
+footer > .column:first-child h2 {
+    margin: 0 0 8px 0;
+    font-size: 1.5rem;
 }
 
-footer .column#label h2 {
-	margin: 0 0 8px 0;
-	font-size: 1.5rem;
-}
-
-footer .column#label p {
-	margin: 0 0 16px 0;
-	line-height: 1.4;
-	max-width: 360px;
+footer > .column:first-child p {
+    margin: 0 0 16px 0;
+    line-height: 1.4;
 }
 
 footer #formulario {
-	flex: 2 1 420px;
-	display: flex;
-	flex-wrap: wrap;
-	gap: 12px;
+    flex: 1;
+    max-width: 705px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 footer form {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 20px;
-	width: 100%;
-	align-items: flex-end;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    align-items: flex-end;
 }
 
 footer form .column {
-	flex: 1 1 200px;
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
 }
 
-footer #formulario .column#formulario-nome,
-footer #formulario .column#formulario-email {
-	width: 338px;
+#formulario-nome,
+#formulario-email {
+    flex: 1 1 calc(50% - 10px);
 }
 
-footer #formulario .column#formulario-cargo,
-footer #formulario .column#formulario-local,
-footer #formulario .column#formulario-telefone {
-	width: 217.67px;
+#formulario-cargo,
+#formulario-local,
+#formulario-telefone {
+    flex: 1 1 calc(33.333% - 14px);
 }
 
-footer #formulario .column#formulario-necessidade {
-	width: 705px;
-}
-
-footer #formulario input,
-footer #formulario select {
-	width: 100%;
-	height: 48px;
-	box-sizing: border-box;
-}
-
-footer label {
-	font-size: 0.9rem;
-	margin-bottom: 6px;
-	color: #dbeeff;
+#formulario-necessidade {
+    flex: 1 1 100%;
 }
 
 footer input,
 footer select {
-	padding: 8px 10px;
-	border-radius: 6px;
-	border: 1px solid rgba(255,255,255,0.12);
-	background: rgba(255,255,255,0.03);
-	color: #ffffff;
+    width: 100%;
+    height: 48px;
+    box-sizing: border-box;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.03);
+    color: #ffffff;
+}
+
+footer label {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+    color: #dbeeff;
 }
 
 footer input::placeholder {
-	color: rgba(255,255,255,0.6);
+    color: rgba(255, 255, 255, 0.6);
 }
 
 footer form > div:last-child {
-	width: 100%;
-	display: flex;
-	justify-content: flex-end;
-	margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
 }
 
 footer button {
-	width: 160px;
-	padding: 12px 0;
-	background: #1C5560;
-	color: #000000;
-	border: none;
-	border-radius: 8px;
-	cursor: pointer;
-	font-weight: 600;
+    width: 160px;
+    padding: 12px 0;
+    background: #1C5560;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: opacity 0.3s;
 }
 
 footer button:hover {
-	opacity: 0.95;
+    opacity: 0.95;
 }
 
 .form-popup {
-	position: fixed;
-	inset: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: rgba(0, 0, 0, 0.85);
-	z-index: 2000;
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 2000;
 }
 
 .form-popup.hidden {
-	display: none;
+    display: none;
 }
 
 .form-popup__content {
-	background: #081727;
-	padding: 40px;
-	border-radius: 20px;
-	text-align: center;
-	max-width: 920px;
-	width: min(90%, 860px);
+    background: #081727;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 920px;
+    width: min(90%, 860px);
 }
 
 .form-popup__content h1 {
-	font-family: 'League Spartan', sans-serif;
-	font-size: 96px;
-	line-height: 1;
-	margin: 0 0 24px;
-	color: #ffffff;
+    font-size: 96px;
+    line-height: 1;
+    margin: 0 0 24px;
+    color: #ffffff;
 }
 
 .form-popup__content p {
-	margin: 0 0 32px;
-	font-size: 1.25rem;
-	color: #dbeeff;
+    margin: 0 0 32px;
+    font-size: 1.25rem;
+    color: #dbeeff;
 }
 
 .form-popup__content button {
-	padding: 14px 28px;
-	font-size: 1rem;
-	border-radius: 12px;
-	background: #2EB600;
-	color: #001F36;
-	border: none;
+    padding: 14px 28px;
+    font-size: 1rem;
+    border-radius: 12px;
+    background: #2EB600;
+    color: #001F36;
+    border: none;
+    cursor: pointer;
 }
 
 @media (max-width: 920px) {
-	.form-popup__content h1 {
-		font-size: clamp(48px, 8vw, 96px);
-	}
+    .form-popup__content h1 {
+        font-size: clamp(48px, 8vw, 96px);
+    }
 }
 
-@media (max-width: 720px) {
-	footer.row {
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-	}
-	footer #formulario {
-		width: 100%;
-	}
-	footer form .column {
-		flex: 1 1 100%;
-	}
-	footer .column#label {
-		text-align: center;
-	}
-}
+@media (max-width: 768px) {
+    footer.row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+    }
 
+    footer > .column:first-child {
+        align-items: center;
+    }
+
+    #formulario-nome,
+    #formulario-email,
+    #formulario-cargo,
+    #formulario-local,
+    #formulario-telefone,
+    #formulario-necessidade {
+        flex: 1 1 100%;
+    }
+
+    footer form > div:last-child {
+        justify-content: center;
+    }
+}

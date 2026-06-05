@@ -1,50 +1,33 @@
-#cursos{
-    padding: 60px 80px;
-    margin: -120px;
-    margin-top: 0;
-    background: linear-gradient(to bottom, #000000 0%, #001f36 70%);
+#cursos {
     text-align: center;
 }
 
-#cursos h2{
+#cursos h2 {
     font-size: 3rem;
     margin-bottom: 50px;
 }
 
-#cursos .row{
+#cursos .row {
     justify-content: space-between;
     gap: 40px;
     margin-bottom: 40px;
-    align-items: center;
 }
 
-#cursos-tecnologia,
-#cursos-gestao,
-#cursos-design{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    flex: 1;;
+#cursos .column {
+    gap: 12px
 }
 
-#cursos-tecnologia img,
-#cursos-gestao img,
-#cursos-design img{
-    width: 150%;
+#cursos .column img {
+    width: 100%;
+    max-width: 150px;
     height: 150px;
     object-fit: contain;
     display: block;
-
 }
 
-#cursos-tecnologia p,
-#cursos-gestao p,
-#cursos-design p{
+#cursos .column p {
     font-size: 1.2rem;
-    text-align: center;
     line-height: 1.6;
-    max-width: 220px;
     margin: 10px auto;
 }
 
@@ -53,4 +36,25 @@
     font-weight: 700;
     color: #FBFFCD;
     margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    
+    #cursos h2 {
+        font-size: 2.2rem;
+        margin-bottom: 30px;
+    }
+
+    #cursos .row {
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+
+    #cursos .column p {
+        font-size: 1.1rem;
+    }
+
+    #cursos > p {
+        font-size: 1.2rem;
+    }
 }

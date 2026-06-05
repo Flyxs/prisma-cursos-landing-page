@@ -1,18 +1,14 @@
 #contato {
     background-color: transparent;
     color: #ffffff;
-    padding: 60px 20px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
 }
 
 #contato .column#label {
-    max-width: 640px;
-    margin: 0 0 40px 0;
     text-align: center;
 }
 
@@ -25,7 +21,6 @@
     font-size: 1rem;
     line-height: 1.6;
     margin: 0 auto;
-    max-width: 520px;
 }
 
 #contatos-contato {
@@ -33,7 +28,6 @@
     flex-direction: column;
     gap: 16px;
     width: 100%;
-    max-width: 920px;
     margin: 0;
     align-items: stretch;
 }
@@ -63,4 +57,27 @@
 
 #contatos-contato .row p {
     text-align: left;
+}
+
+@media (max-width: 768px) {
+  #contato {
+    gap: 24px;
+  }
+
+  #contato > .column:first-child h2 {
+    font-size: 1.8rem;
+  }
+
+  #contato > .column:first-child p {
+    font-size: 0.95rem;
+  }
+
+  #contatos-contato .row {
+    padding: 14px;
+  }
+
+  #contatos-contato .row img {
+    width: 24px;
+    height: 24px;
+  }
 }
