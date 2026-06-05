@@ -286,6 +286,39 @@
         </div>
     </footer>
 
+    <div id="form-popup" class="form-popup hidden">
+        <div class="form-popup__content">
+            <h1>FORMULÁRIO ENVIADO!</h1>
+            <p>ENTRAREMOS EM CONTATO EM BREVE!</p>
+            <button type="button" id="form-popup-close">Fechar</button>
+        </div>
+    </div>
+
+    <script src="style/js/contato.js"></script>
+    <script>
+        const footerForm = document.querySelector('footer form');
+        const formPopup = document.getElementById('form-popup');
+        const formPopupClose = document.getElementById('form-popup-close');
+
+        if (footerForm && formPopup && formPopupClose) {
+            footerForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+                formPopup.classList.remove('hidden');
+                footerForm.reset();
+            });
+
+            formPopupClose.addEventListener('click', function () {
+                formPopup.classList.add('hidden');
+            });
+
+            formPopup.addEventListener('click', function (event) {
+                if (event.target === formPopup) {
+                    formPopup.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+
 </body>
 
 </html>
