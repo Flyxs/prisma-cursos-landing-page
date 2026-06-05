@@ -7,7 +7,7 @@ header {
     background-color: #1C5560;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
     z-index: 1000;
-    transition: all 0.4s ease; /* Transição suave caso redimensione a tela */
+    transition: all 0.4s ease;
 }
 
 header nav.row {

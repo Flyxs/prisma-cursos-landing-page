@@ -1,70 +1,65 @@
-#depoimentos
-{
+#depoimentos {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
-#depoimentos > #label
-{
+#depoimentos > .column {
   align-items: center;
   text-align: center;
   gap: 12px;
 }
 
-#depoimentos > #label h2
-{
+#depoimentos > .column h2 {
   font-size: 36px;
   font-weight: 700;
 }
 
-#depoimentos > #label p
-{
+#depoimentos > .column p {
   font-size: 14px;
   font-weight: 600;
   color: #7fbfa8;
 }
 
-#carrossel-wrapper
-{
+#carrossel-wrapper {
   overflow: hidden;
   width: 100%;
+  max-width: 100%;
 }
 
-#carrossel-track
-{
+#carrossel-track {
   display: flex;
   gap: 16px;
-  transition: transform 0.1s ease;
+  transition: transform 0.01s ease;
 }
 
-#carrossel-card
-{
-  background: #1C5560 50%;
+#carrossel-card {
+  background: #1C5560;
   border-radius: 10px;
   padding: 20px;
   min-width: calc(20% - 12px);
+  box-sizing: border-box;
   flex-shrink: 0;
   gap: 14px;
-  max-width: 100px;
 }
 
-#carrossel-card > img
-{
+#carrossel-card > img {
   width: 90px;
 }
 
-#carrossel-card > p
-{
+#carrossel-card > p {
   font-size: 13px;
   color: #c8d6dc;
   line-height: 1.65;
   flex: 1;
 }
 
-#carrossel-card-profile
-{
+#carrossel-card-profile {
   align-items: center;
   gap: 10px;
   padding-top: 10px;
@@ -72,36 +67,31 @@
   width: 100%;
 }
 
-#carrossel-card-profile > img
-{
+#carrossel-card-profile > img {
   width: 34px;
   height: 34px;
   flex-shrink: 0;
 }
 
-#carrossel-card-profile-user p:first-child
-{
+#carrossel-card-profile-user p:first-child {
   font-size: 13px;
   font-weight: 600;
   color: #ffffff;
 }
 
-#carrossel-card-profile-user p:last-child
-{
+#carrossel-card-profile-user p:last-child {
   font-size: 12px;
   color: #8aa0aa;
 }
 
-.carrossel-dots
-{
+.carrossel-dots {
   display: flex;
   justify-content: center;
   gap: 8px;
   margin-top: 8px;
 }
 
-.dot
-{
+.dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -112,14 +102,16 @@
   transition: background 0.25s;
 }
 
-.dot.active
-{
+.dot.active {
   background: #d4c97a;
 }
 
-@media (max-width: 768px)
-{
+@media (max-width: 768px) {
+  #depoimentos {
+    padding: 0 20px;
+  }
+
   #carrossel-card {
-    min-width: calc(25% - 12px);
+    min-width: 100%;
   }
 }
