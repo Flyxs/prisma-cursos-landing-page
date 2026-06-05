@@ -1,0 +1,95 @@
+#sobre
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 72px 40px;
+}
+
+#sobre > #label
+{
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  max-width: 860px;
+}
+
+#sobre > #label h2
+{
+  font-size: 36px;
+  font-weight: 700;
+  color: #d4c97a;
+}
+
+#sobre > #label p
+{
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+#sobre > #label p strong
+{
+  font-weight: 700;
+}
+
+#sobre-missao
+{
+  align-items: center;
+  gap: 24px;
+  max-width: 860px;
+  width: 100%;
+  background: #2a4a3e;
+  border-radius: 10px;
+  padding: 28px 24px;
+}
+
+#sobre-missao #label
+{
+  gap: 14px;
+  flex: 1;
+}
+
+#sobre-missao #label h3
+{
+  font-size: 22px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.04em;
+}
+
+#sobre-missao #label p
+{
+  font-size: 13px;
+  color: #c8d6dc;
+  line-height: 1.7;
+}
+
+#sobre-missao img
+{
+  width: 220px;
+  flex-shrink: 0;
+}
+
+#sobre > h3
+{
+  font-size: 36px;
+  font-weight: 700;
+  color: #d4c97a;
+  text-align: center;
+}
+
+@media (max-width: 720px)
+{
+  #sobre-missao
+  {
+    flex-direction: column;
+  }
+  
+  #sobre-missao img
+  {
+    width: 100%;
+  }
+}

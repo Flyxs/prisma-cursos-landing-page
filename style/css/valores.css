@@ -1,0 +1,61 @@
+#sobre-valores
+{
+  gap: 20px;
+  max-width: 860px;
+  width: 100%;
+  align-items: stretch;
+}
+
+#sobre-valores-simplicidade,
+#sobre-valores-acessibilidade,
+#sobre-valores-flexibilidade
+{
+  flex: 1;
+  gap: 16px;
+  align-items: center;
+}
+
+#sobre-valores-simplicidade #label,
+#sobre-valores-acessibilidade #label,
+#sobre-valores-flexibilidade #label 
+{
+  background: #2a4a3e;
+  border-radius: 10px;
+  padding: 20px 18px 24px;
+  gap: 12px;
+  width: 100%;
+}
+
+#sobre-valores-simplicidade #label h3,
+#sobre-valores-acessibilidade #label h3,
+#sobre-valores-flexibilidade #label h3
+{
+  font-size: 18px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+}
+
+#sobre-valores-simplicidade #label p,
+#sobre-valores-acessibilidade #label p,
+#sobre-valores-flexibilidade #label p
+{
+  font-size: 13px;
+  color: #ffffff;
+  line-height: 1.7;
+}
+
+#sobre-valores img
+{
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+@media (max-width: 720px)
+{
+  #sobre-valores
+  {
+    flex-direction: column;
+  }
+}
