@@ -1,0 +1,133 @@
+#depoimentos
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 72px 40px;
+}
+
+#depoimentos > #label
+{
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+#depoimentos > #label h2
+{
+  font-size: 36px;
+  font-weight: 700;
+  color: #d4c97a;
+}
+
+#depoimentos > #label p
+{
+  font-size: 14px;
+  font-weight: 600;
+  color: #7fbfa8;
+}
+
+#carrossel-wrapper
+{
+  overflow: hidden;
+  width: 100%;
+  max-width: 860px;
+}
+
+#carrossel-track
+{
+  display: flex;
+  gap: 16px;
+  transition: transform 0.4s ease;
+}
+
+#carrossel-card
+{
+  background: #1b3040;
+  border-radius: 10px;
+  padding: 22px 20px 24px;
+  min-width: calc(33.333% - 11px);
+  flex-shrink: 0;
+  gap: 14px;
+}
+
+#carrossel-card > img
+{
+  width: 90px;
+}
+
+#carrossel-card > p
+{
+  font-size: 13px;
+  color: #c8d6dc;
+  line-height: 1.65;
+  flex: 1;
+}
+
+#carrossel-card-profile
+{
+  align-items: center;
+  gap: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  width: 100%;
+}
+
+#carrossel-card-profile > img
+{
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+}
+
+#carrossel-card-profile-user
+{
+  flex-direction: column;
+  gap: 2px;
+}
+
+#carrossel-card-profile-user p:first-child
+{
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+#carrossel-card-profile-user p:last-child
+{
+  font-size: 12px;
+  color: #8aa0aa;
+}
+
+.carrossel-dots
+{
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.dot
+{
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  transition: background 0.25s;
+}
+
+.dot.active
+{
+  background: #d4c97a;
+}
+
+@media (max-width: 720px)
+{
+  #carrossel-card {
+    min-width: 85%;
+  }
+}
